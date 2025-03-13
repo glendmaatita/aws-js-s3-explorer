@@ -188,7 +188,7 @@ permissions and limitations under the License.
         size: 4
     };
 
-    AWS.config.region = 'us-east-1';
+    AWS.config.region = 'ap-southeast-3';
     console.log('Region: ' + AWS.config.region);
 
     // Initialize S3 SDK and the moment library (for time formatting utilities)
@@ -230,7 +230,7 @@ permissions and limitations under the License.
             if (AWS.config.region === "us-east-1") {
                 strBucket = '.s3.amazonaws.com/';
             } else {
-                strBucket = '.s3-' + AWS.config.region + '.amazonaws.com/'
+                strBucket = '.s3.' + AWS.config.region + '.amazonaws.com/'
             }
         }
         return document.location.protocol + '//' + bucket + strBucket + enckey;
